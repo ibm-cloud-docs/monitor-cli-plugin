@@ -33,7 +33,7 @@ Also provide an appropriate ID above that aligns with your offering name, for ex
 The short description section should include one to two sentences describing why a developer would want to use this cli. This should be conversational style. For search engine optimization, include your offering's CLI name. Keep the {: shortdesc} after the first paragraph so that the framework renders it properly.
 Example: -->
 
-The {{site.data.keyword.cloud}} command-line interface (CLI) provides extra capabilities for service offerings. You can use {{site.data.keyword.cloud_notm}} CLI to manage V2 service brokers and templates.
+The {{site.data.keyword.cloud}} command-line interface (CLI) provides extra capabilities for service offerings. This information describes how you can use the CLI to list list all the service instances for {{site.data.keyword.mon_full_notm}} for an account.
 {: shortdesc} 
 
 <!-- Prerequisites: REQUIRED FOR PLUG-INS
@@ -43,13 +43,13 @@ This section tells users what's required to use the CLI commands.
 
 <!-- Change ID below to match your CLI. -->
 ## Prerequisites
-{: #<cli_name>-cli-prereq}
+{: #sysdig-monitor-cli-prereq}
 
 * Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started).
-* Install the <CLI_name> CLI by running the following command:
+* Install the {{site.data.keyword.mon_full_notm}} CLI by running the following command:
 
    ```sh
-   ibmcloud plugin install <cli-plugin>
+   ibmcloud plugin install monitoring
    ```
    {: pre}
    <!-- Replace the <cli-plugin> above with the name of your CLI plug-in. Run 'ibmcloud plugin repo-plugins' to find the name.-->
@@ -103,158 +103,48 @@ In this example, `resource-group-id` and `resource-group-name` are exclusive.
 
 -->
 
-## cloud-cli login
-{: #login}
+## ibmcloud sysdig service-instances
+{: #service-instances}
 
-Use this command to log in to {{site.data.keyword.cloud_notm}}. 
-
-```
-cloud-cli login -a API_ENDPOINT [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] 
-                [--no-iam] [-c (ACCOUNT_ID | ACCOUNT_OWNER_USER_ID) | --no-account] 
-		[-g (RESOURCE_GROUP_NAME | RESOURCE_GROUP_ID)]
-```
-
-<!-- Remove the command-level Prerequisites section if the command doesn't have any. -->
-### Prerequisites
-{: #login-prereqs}
-
-### Command options 
-{: #login-options}
-
-<dl>
-<dt>-a API_ENDPOINT</dt>
-<dd>The API endpoint, such as `cloud.ibm.com`. Required.</dd>
-<dt>--sso</dt>
-<dd>Specify this option to [log in with a federated ID](/docs/iam?topic=iam-federated_id). Using this option prompts you to authenticate with your single sign-on provider and enter a one-time passcode to log in.</dd>
-<dt>-u USERNAME</dt>
-<dd>The {{site.data.keyword.cloud_notm}} user name.</dd>
-<dt>-p PASSWORD</dt>
-<dd>The user password.</dd>
-<dt>--apikey API_KEY or @API_KEY_FILE_PATH</dt>
-<dd>The API key content or the path of an API key file that is indicated by the @ symbol.</dd>
-<dt>--no-iam</dt>
-<dd>Force authentication with the login server instead of the public IAM.</dd>
-<dt>-c ACCOUNT_ID</dt>
-<dd>The ID of the target account. This option is exclusive with the `--no account` option.</dd>
-<dt>--no-account</dt>
-<dd>Forced login without the account. This option isn't recommended, and it is exclusive with the `-c` option.</dd>
-<dt>-g RESOURCE_GROUP</dt>
-<dd>The name or ID of the target resource group.</dd>
-</dl>
-   
-### Examples
-{: #login-examples}
-
-Log in to {{site.data.keyword.cloud_notm}} by entering `tom` for the user ID and `123` for the password.
+Use this command to list {{site.data.keyword.mon_full_notm}} service instances. 
 
 ```sh
-cloud-cli login -a cloud.ibm.com -u tom -p 123
+ibmcloud sysdig service-instances [OPTIONS]
+```
+{:pre}
+
+
+
+### Command options 
+{: #service-instances-options}
+
+| Option | Description |
+| ------ | ----------- |
+|--service-name value, --sn value | Name of the service|
+  |--region value, -r value      |    Name of the region, for example, `us-south` or `eu-gb`. If not specified, the targeted region will be used. |
+  |-g value             |             Resource Group associated with the hosted service|
+  |--all-resource-groups, --arg  |    Services hosted across all resource groups|
+  |--long, -l              |          Show additional fields in the output|
+  |--quiet, -q           |            Supresses verbose output|
+  |--json, -j                |        Produces outut as raw JSON|
+   
+### Examples
+{: #service-instances-examples}
+
+TBD
+
+```sh
+xxx
 ```
 {: pre}
 
 ### Output
-{: #command-output}
+{: #service-instances-output}
 
 The command returns the following output:
 ```
-Targeted account tom Account (abc123cf7ca78fb1997fcbd8999106af)
-                      
-API endpoint:      https://cloud.ibm.com   
-Region:            us-south   
-User:              tom 
-Account:           tom's Account (abc123cf7ca78fb1997fcbd8999106af)   
-Resource group:    No resource group targeted, use 'ibmcloud target -g RESOURCE_GROUP'   
-CF API endpoint:      
-Org:                  
-Space:                
-
-Tip: If you are managing Cloud Foundry applications and services
-- Use 'ibmcloud target --cf' to target Cloud Foundry org/space interactively, or use 'ibmcloud target --cf-api ENDPOINT -o  ORG -s SPACE' to target the org/space.
-- Use 'ibmcloud cf' if you want to run the Cloud Foundry CLI with current IBM Cloud CLI context.
+xxx
 ```
 {: screen}
 
-## command xxx
-{: #anchor_ID}
 
-<!-- Grouping guidance:
-If your plug-in has many commands, you can group them logically under H2 (##) headings. Within the groups, commands should be listed alphabetically following the previously described format, but with an extra heading level. 
-
-In the H2, don't repeat the core command, e.g. "`billing` commands". Instead, use a plain-text description, like "Billing and usage". -->
-
-## Logging in
-{: #my-cli-login-cmd}
-
-### cloud-cli login
-{: #login}
-
-Use this command to log in to {{site.data.keyword.cloud_notm}}. 
-
-```
-cloud-cli login -a API_ENDPOINT [--sso] [-u USERNAME] [-p PASSWORD] [--apikey KEY | @KEY_FILE] 
-                [--no-iam] [-c (ACCOUNT_ID | ACCOUNT_OWNER_USER_ID) | --no-account] 
-		[-g (RESOURCE_GROUP_NAME | RESOURCE_GROUP_ID)]
-```
-
-#### Prerequisites
-{: #login-prereqs}
-
-#### Command options 
-{: #login-options}
-
-<dl>
-<dt>-a API_ENDPOINT</dt>
-<dd>The API endpoint, such as `cloud.ibm.com`. Required.</dd>
-<dt>--sso</dt>
-<dd>Specify this option to [log in with a federated ID](/docs/iam?topic=iam-federated_id). Using this option prompts you to authenticate with your single sign-on provider and enter a one-time passcode to log in.</dd>
-<dt>-u USERNAME</dt>
-<dd>The {{site.data.keyword.cloud_notm}} user name.</dd>
-<dt>-p PASSWORD</dt>
-<dd>The user password.</dd>
-<dt>--apikey API_KEY or @API_KEY_FILE_PATH</dt>
-<dd>The API key content or the path of an API key file that is indicated by the @ symbol.</dd>
-<dt>--no-iam</dt>
-<dd>Force authentication with the login server instead of the public IAM.</dd>
-<dt>-c ACCOUNT_ID</dt>
-<dd>The ID of the target account. This option is exclusive with the `--no account` option.</dd>
-<dt>--no-account</dt>
-<dd>Forced login without the account. This option isn't recommended, and it is exclusive with the `-c` option.</dd>
-<dt>-g RESOURCE_GROUP</dt>
-<dd>The name or ID of the target resource group.</dd>
-</dl>
-   
-#### Examples
-{: #login-examples}
-
-Log in to {{site.data.keyword.cloud_notm}} by entering `tom` for the user ID and `123` for the password.
-
-```sh
-cloud-cli login -a cloud.ibm.com -u tom -p 123
-```
-{: pre}
-
-#### Output
-{: #command-output}
-
-The command returns the following output.
-
-```
-Targeted account tom Account (abc123cf7ca78fb1997fcbd8999106af)
-                      
-API endpoint:      https://cloud.ibm.com   
-Region:            us-south   
-User:              tom 
-Account:           tom's Account (abc123cf7ca78fb1997fcbd8999106af)   
-Resource group:    No resource group targeted, use 'ibmcloud target -g RESOURCE_GROUP'   
-CF API endpoint:      
-Org:                  
-Space:                
-
-Tip: If you are managing Cloud Foundry applications and services
-- Use 'ibmcloud target --cf' to target Cloud Foundry org/space interactively, or use 'ibmcloud target --cf-api ENDPOINT -o  ORG -s SPACE' to target the org/space.
-- Use 'ibmcloud cf' if you want to run the Cloud Foundry CLI with current IBM Cloud CLI context.
-```
-{: screen}
-
-### command xxx
-{: #anchor_ID}
