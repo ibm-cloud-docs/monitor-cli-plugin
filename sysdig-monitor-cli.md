@@ -69,7 +69,7 @@ ibmcloud monitoring service-instances [OPTIONS]
 <dt>--quiet | -q</dt>
 <dd>Supresses verbose output.</dd>
 <dt>--json | -j</dt>
-<dd>Produces outut as raw JSON.</dd>
+<dd>Produces output as raw JSON.</dd>
 <dt>--help</dt>
 <dd>List options available for the command</dd>
 </dl>
