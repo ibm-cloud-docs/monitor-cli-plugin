@@ -77,7 +77,7 @@ ibmcloud monitoring service-instances [OPTIONS]
 ### Examples
 {: #service-instances-examples}
 
-The following are examples using the **`monitoring service-instances`** command.
+The following are examples using the **`ibmcloud monitoring service-instances`** command.
 
 List all monitoring service instances.
 
