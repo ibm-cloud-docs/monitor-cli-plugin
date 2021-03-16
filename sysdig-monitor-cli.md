@@ -56,20 +56,20 @@ ibmcloud monitoring service-instances [OPTIONS]
 {: #service-instances-options}
 
 <dl>
-<dt>--service-name &lt;NAME&gt;>, --sn &lt;NAME&gt;</dt>
-<dd>Name of the service</dd>
-<dt>-region &lt;NAME&gt;, -r &lt;NAME&gt;</dt>
+<dt>--service-name &lt;NAME&gt;> | --sn &lt;NAME&gt;</dt>
+<dd>Name of the service.</dd>
+<dt>-region &lt;NAME&gt; | -r &lt;NAME&gt;</dt>
 <dd>Name of the region, for example, `us-south` or `eu-gb`. If not specified, the targeted region will be used.</dd>
 <dt>-g &lt;GROUP&gt;</dt>
-<dd>Resource Group associated with the hosted service</dd>
-<dt>--all-resource-groups, --arg</dt>
-<dd>Services hosted across all resource groups</dd>
-<dt>--long, -l</dt>
-<dd>Show additional fields in the output</dd>
-<dt>--quiet, -q</dt>
-<dd>Supresses verbose output</dd>
-<dt>--json, -j</dt>
-<dd>Produces outut as raw JSON</dd>
+<dd>Resource Group associated with the hosted service.</dd>
+<dt>--all-resource-groups | --arg</dt>
+<dd>Services hosted across all resource groups.</dd>
+<dt>--long | -l</dt>
+<dd>Show additional fields in the output.</dd>
+<dt>--quiet | -q</dt>
+<dd>Supresses verbose output.</dd>
+<dt>--json | -j</dt>
+<dd>Produces outut as raw JSON.</dd>
 <dt>--help</dt>
 <dd>List options available for the command</dd>
 </dl>
