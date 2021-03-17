@@ -19,7 +19,7 @@ keywords: IBM Cloud Monitoring CLI, IBM Cloud Monitoring command line , IBM Clou
 {:note: .note}
 
 
-# {{site.data.keyword.mon_full_notm}} (ibmcloud monitoring) CLI
+# {{site.data.keyword.cloud_notm}} Monitoring (ibmcloud monitoring) CLI
 {: #sysdig-monitor-cli}
 
 The {{site.data.keyword.cloud}} command-line interface (CLI) provides extra capabilities for service offerings. This information describes how you can use the CLI to list all the service instances for {{site.data.keyword.mon_full_notm}} for an account.
@@ -29,7 +29,7 @@ The {{site.data.keyword.cloud}} command-line interface (CLI) provides extra capa
 {: #sysdig-monitor-cli-prereq}
 
 * Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started).
-* Install the {{site.data.keyword.mon_full_notm}} CLI by running the following command:
+* Install the {{site.data.keyword.cloud_notm}} Monitoring CLI by running the following command:
 
    ```sh
    ibmcloud plugin install monitoring
@@ -68,8 +68,8 @@ ibmcloud monitoring service-instances [OPTIONS]
 <dd>Show additional fields in the output.</dd>
 <dt>--quiet | -q</dt>
 <dd>Supresses verbose output.</dd>
-<dt>--json | -j</dt>
-<dd>Produces output as raw JSON.</dd>
+<dt>--output &lt;TYPE&gt;</dt>
+<dd>Type of output produced.  Only supported value is `JSON`.</dd>
 <dt>--help</dt>
 <dd>List options available for the command</dd>
 </dl>
