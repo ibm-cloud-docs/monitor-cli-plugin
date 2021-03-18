@@ -59,18 +59,17 @@ ibmcloud monitoring service-instances [OPTIONS]
 <dt>--service-name &lt;NAME&gt;> | --sn &lt;NAME&gt;</dt>
 <dd>Name of the service.</dd>
 <dt>-region &lt;NAME&gt; | -r &lt;NAME&gt;</dt>
-<dd>Name of the region, for example, `us-south` or `eu-gb`. If not specified, the targeted region will be used.</dd>
+<dd>Name of the region, for example, `us-south` or `eu-gb`. If not specified, the region logged into or targeted will be used.</dd>
 <dt>-g &lt;GROUP&gt;</dt>
 <dd>Resource Group associated with the hosted service.</dd>
 <dt>--all-resource-groups | --arg</dt>
 <dd>Services hosted across all resource groups.</dd>
-<dt>--long | -l</dt>
-<dd>Show additional fields in the output.</dd>
 <dt>--quiet | -q</dt>
 <dd>Supresses verbose output.</dd>
 <dt>--output &lt;TYPE&gt;</dt>
-<dd>Type of output produced.  Only supported value is `JSON`.</dd>
-<dt>--help</dt>
+<dd>A comma-separated list of output preferences enclosed in double-quotes (").  If only a single preference is specified, the double-quotes can be omitted. Supported options are `WIDE` and `JSON`.  <p>If `JSON` is specified, output will be returned in JSON format.  If `JSON` is not specified, output will be returned in tabular format.</p> 
+<p>`WIDE` returns additional details in the output.</p></dd>
+<dt>--help | -h</dt>
 <dd>List options available for the command</dd>
 </dl>
   
@@ -96,7 +95,7 @@ ibmcloud monitoring service-instances -g test-rg
 List all instances and include additional details, such as ID, GUID, and Resource ID.
 
 ```sh
-ibmcloud monitoring service-instances --long
+ibmcloud monitoring service-instances --output wide
 ```
 {: pre}
 
