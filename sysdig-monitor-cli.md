@@ -39,7 +39,61 @@ The {{site.data.keyword.cloud}} command-line interface (CLI) provides extra capa
 You're notified on the command line when updates to the {{site.data.keyword.cloud_notm}} CLI and plug-ins are available. Be sure to keep your CLI up to date so that you can use the latest commands. You can view the current version of all installed plug-ins by running `ibmcloud plugin list`.
 {: tip}
 
+## ibmcloud monitoring alert list
+{: #alert-list}
 
+Use this command to list {{site.data.keyword.mon_full_notm}} alerts for the specified instance. 
+
+```sh
+ibmcloud monitoring alert list --name <NAME> [OPTIONS]
+```
+{:pre}
+
+
+### Command options 
+{: #alert-list-options}
+
+<dl>
+<dt>--name &lt;NAME&gt;> | --n &lt;NAME&gt;</dt>
+<dd>Name of the instance.</dd>
+<dt>--region &lt;NAME&gt; | -r &lt;NAME&gt;</dt>
+<dd>Name of the region, for example, `us-south` or `eu-gb`. If not specified, the region logged into or targeted will be used.</dd>
+<dt>--severity &lt;SEVERITY&gt; | -s &lt;SEVERITY&gt;</dt>
+<dd>A comma-separated list of severity values enclosed in double-quotes (").  If only a single severity is specified, the double-quotes can be omitted. </dd>
+<dt>--output &lt;TYPE&gt;</dt>
+<dd>A comma-separated list of output preferences enclosed in double-quotes (").  If only a single preference is specified, the double-quotes can be omitted. Supported options are `WIDE` and `JSON`.  <p>If `JSON` is specified, output will be returned in JSON format.  If `JSON` is not specified, output will be returned in tabular format.</p> 
+<p>`WIDE` returns additional details in the output.</p></dd>
+<dt>--enabled &lt;SETTING&gt; | -e &lt;SETTING&gt;</dt>
+<dd>Specifies to return platform metrics or not.  `TRUE` specifies the platform metrics are to be returned if enabled for instance.  `FALSE` specifies the platform metrics are not to be returned.</dd>
+<dt>--help | -h</dt>
+<dd>List options available for the command</dd>
+</dl>
+  
+### Examples
+{: #alert-list-examples}
+
+The following are examples using the **`ibmcloud monitoring alert list`** command.
+
+List all alerts for the `IBM Cloud Monitoring with Sysdig-abc` instance.
+
+```sh
+ibmcloud monitoring alert list --name "IBM Cloud Monitoring with Sysdig-abc"
+```
+{: pre}
+
+List all alerts for the `IBM Cloud Monitoring with Sysdig-abc` instance in the `us-south` region.
+
+```sh
+ibmcloud monitoring alert list --name "IBM Cloud Monitoring with Sysdig-abc" --region us-south
+```
+{: pre}
+
+List all alerts for the `IBM Cloud Monitoring with Sysdig-abc` instance with `low` and `medium` severity excluding platform metrics.
+
+```sh
+ibmcloud monitoring alert list --name "IBM Cloud Monitoring with Sysdig-abc" --enabled false --severity low,medium
+```
+{: pre}
 
 ## ibmcloud monitoring service-instances
 {: #service-instances}
@@ -58,7 +112,7 @@ ibmcloud monitoring service-instances [OPTIONS]
 <dl>
 <dt>--service-name &lt;NAME&gt;> | --sn &lt;NAME&gt;</dt>
 <dd>Name of the service.</dd>
-<dt>-region &lt;NAME&gt; | -r &lt;NAME&gt;</dt>
+<dt>--region &lt;NAME&gt; | -r &lt;NAME&gt;</dt>
 <dd>Name of the region, for example, `us-south` or `eu-gb`. If not specified, the region logged into or targeted will be used.</dd>
 <dt>--all-regions</dt>
 <dd>Services hosted across all regions.</dd>
@@ -122,3 +176,46 @@ ibmcloud monitoring service-instances --region us-south --output json
 ```
 {: pre}
 
+## ibmcloud monitoring service-instance-platform
+{: #service-instance-platform}
+
+Use this command to configure the specified {{site.data.keyword.mon_full_notm}} service instance to enable or disable platform metrics.  When run, the command prompts the user to keep an existing service instance or replace it with the specified instance. 
+
+```sh
+ibmcloud monitoring service-instance-platform --name <NAME> [OPTIONS]
+```
+{:pre}
+
+
+### Command options 
+{: #service-instance-platform-options}
+
+<dl>
+<dt>--name &lt;NAME&gt;> | --n &lt;NAME&gt;</dt>
+<dd>Name of the instance.</dd>
+<dt>--region &lt;NAME&gt; | -r &lt;NAME&gt;</dt>
+<dd>Name of the region, for example, `us-south` or `eu-gb`. If not specified, the region logged into or targeted will be used.</dd>
+<dt>--force</dt>
+<dd>Supresses the prompt and takes the default action.</dd>
+<dt>--help | -h</dt>
+<dd>List options available for the command</dd>
+</dl>
+  
+### Examples
+{: #service-instance-platform-examples}
+
+The following are examples using the **`ibmcloud monitoring service-instance-platform`** command.
+
+Configures the `IBM Cloud Monitoring with Sysdig-abc` as the instance to receive platform metrics.
+
+```sh
+ibmcloud monitoring service-instance-platform --name "IBM Cloud Monitoring with Sysdig-abc"
+```
+{: pre}
+
+Configures the `IBM Cloud Monitoring with Sysdig-abc` in the `eu-gb` region as the instance to receive platform metrics.
+
+```sh
+ibmcloud monitoring service-instance-platform --name "IBM Cloud Monitoring with Sysdig-abc" --region eu-gb
+```
+{: pre}
