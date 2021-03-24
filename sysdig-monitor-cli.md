@@ -176,19 +176,19 @@ ibmcloud monitoring service-instances --region us-south --output json
 ```
 {: pre}
 
-## ibmcloud monitoring platform-metrics-enable
-{: #platform-metrics-enable}
+## ibmcloud monitoring platform-metrics-receiver
+{: #platform-metrics-receiver}
 
-Use this command to configure the specified {{site.data.keyword.mon_full_notm}} service instance to enable or disable platform metrics.  When run, the command prompts the user to keep an existing service instance or replace it with the specified instance. 
+Use this command to configure the specified {{site.data.keyword.mon_full_notm}} service instance to receive platform metrics.  When run, the command prompts the user to keep an existing service instance or replace it with the specified instance. 
 
 ```sh
-ibmcloud monitoring platform-metrics-enable --name <NAME> [OPTIONS]
+ibmcloud monitoring platform-metrics-receiver --name <NAME> [OPTIONS]
 ```
 {:pre}
 
 
 ### Command options 
-{: #platform-metrics-enable-options}
+{: #platform-metrics-receiver-options}
 
 <dl>
 <dt>--name &lt;NAME&gt; | --n &lt;NAME&gt;</dt>
@@ -202,20 +202,20 @@ ibmcloud monitoring platform-metrics-enable --name <NAME> [OPTIONS]
 </dl>
   
 ### Examples
-{: #platform-metrics-enable-examples}
+{: #platform-metrics-receiver-examples}
 
-The following are examples using the **`ibmcloud monitoring platform-metrics-enable`** command.
+The following are examples using the **`ibmcloud monitoring platform-metrics-receiver`** command.
 
 Configures the `IBM Cloud Monitoring with Sysdig-abc` as the instance to receive platform metrics.
 
 ```sh
-ibmcloud monitoring platform-metrics-enable --name "IBM Cloud Monitoring with Sysdig-abc"
+ibmcloud monitoring platform-metrics-receiver --name "IBM Cloud Monitoring with Sysdig-abc"
 ```
 {: pre}
 
 Configures the `IBM Cloud Monitoring with Sysdig-abc` in the `eu-gb` region as the instance to receive platform metrics.
 
 ```sh
-ibmcloud monitoring platform-metrics-enable --name "IBM Cloud Monitoring with Sysdig-abc" --region eu-gb
+ibmcloud monitoring platform-metrics-receiver --name "IBM Cloud Monitoring with Sysdig-abc" --region eu-gb
 ```
 {: pre}
