@@ -2,7 +2,7 @@
  
 copyright:
   years:  2021
-lastupdated: "2021-03-16"
+lastupdated: "2021-03-24"
 
 subcollection: sysdig-monitor-plugin-cli
 
@@ -22,7 +22,7 @@ keywords: IBM Cloud Monitoring CLI, IBM Cloud Monitoring command line , IBM Clou
 # {{site.data.keyword.cloud_notm}} Monitoring (ibmcloud monitoring) CLI
 {: #sysdig-monitor-cli}
 
-The {{site.data.keyword.cloud}} command-line interface (CLI) provides extra capabilities for service offerings. This information describes how you can use the CLI to list all the service instances for {{site.data.keyword.mon_full_notm}} for an account.
+The {{site.data.keyword.cloud}} command-line interface (CLI) provides extra capabilities for service offerings. This information describes how you can use the CLI to access information in {{site.data.keyword.mon_full_notm}}.
 {: shortdesc} 
 
 ## Prerequisites
@@ -54,17 +54,17 @@ ibmcloud monitoring alert list --name <NAME> [OPTIONS]
 {: #alert-list-options}
 
 <dl>
-<dt>--name &lt;NAME&gt;> | --n &lt;NAME&gt;</dt>
+<dt>--name &lt;NAME&gt; | --n &lt;NAME&gt;</dt>
 <dd>Name of the instance.</dd>
 <dt>--region &lt;NAME&gt; | -r &lt;NAME&gt;</dt>
 <dd>Name of the region, for example, `us-south` or `eu-gb`. If not specified, the region logged into or targeted will be used.</dd>
 <dt>--severity &lt;SEVERITY&gt; | -s &lt;SEVERITY&gt;</dt>
 <dd>A comma-separated list of severity values enclosed in double-quotes (").  If only a single severity is specified, the double-quotes can be omitted. </dd>
 <dt>--output &lt;TYPE&gt;</dt>
-<dd>A comma-separated list of output preferences enclosed in double-quotes (").  If only a single preference is specified, the double-quotes can be omitted. Supported options are `WIDE` and `JSON`.  <p>If `JSON` is specified, output will be returned in JSON format.  If `JSON` is not specified, output will be returned in tabular format.</p> 
+<dd>A comma-separated list of output preferences enclosed in double-quotes (").  If only a single preference is specified, the double-quotes can be omitted. Supported options are `WIDE` and `JSON`.  <p>If `JSON` is specified, output will be returned in JSON format.  If `JSON` is not specified, output will be returned in a tabular format.</p> 
 <p>`WIDE` returns additional details in the output.</p></dd>
 <dt>--enabled &lt;SETTING&gt; | -e &lt;SETTING&gt;</dt>
-<dd>Specifies to return platform metrics or not.  `TRUE` specifies the platform metrics are to be returned if enabled for instance.  `FALSE` specifies the platform metrics are not to be returned.</dd>
+<dd>Indicates the alerts to be listed based on configured notification setting.  If specified, `--enabled true` will list alerts for instances where notifications, for example, email or Slack, are enabled.  Specifying `--enabled false` will return a list of alerts for instances where notifications are not enabled.  </dd>
 <dt>--help | -h</dt>
 <dd>List options available for the command</dd>
 </dl>
@@ -88,7 +88,7 @@ ibmcloud monitoring alert list --name "IBM Cloud Monitoring with Sysdig-abc" --r
 ```
 {: pre}
 
-List all alerts for the `IBM Cloud Monitoring with Sysdig-abc` instance with `low` and `medium` severity excluding platform metrics.
+List all alerts for the `IBM Cloud Monitoring with Sysdig-abc` instance with `low` and `medium` severity where notifications are not enabled.
 
 ```sh
 ibmcloud monitoring alert list --name "IBM Cloud Monitoring with Sysdig-abc" --enabled false --severity low,medium
@@ -110,7 +110,7 @@ ibmcloud monitoring service-instances [OPTIONS]
 {: #service-instances-options}
 
 <dl>
-<dt>--service-name &lt;NAME&gt;> | --sn &lt;NAME&gt;</dt>
+<dt>--service-name &lt;NAME&gt; | --sn &lt;NAME&gt;</dt>
 <dd>Name of the service.</dd>
 <dt>--region &lt;NAME&gt; | -r &lt;NAME&gt;</dt>
 <dd>Name of the region, for example, `us-south` or `eu-gb`. If not specified, the region logged into or targeted will be used.</dd>
@@ -123,7 +123,7 @@ ibmcloud monitoring service-instances [OPTIONS]
 <dt>--quiet | -q</dt>
 <dd>Supresses verbose output.</dd>
 <dt>--output &lt;TYPE&gt;</dt>
-<dd>A comma-separated list of output preferences enclosed in double-quotes (").  If only a single preference is specified, the double-quotes can be omitted. Supported options are `WIDE` and `JSON`.  <p>If `JSON` is specified, output will be returned in JSON format.  If `JSON` is not specified, output will be returned in tabular format.</p> 
+<dd>A comma-separated list of output preferences enclosed in double-quotes (").  If only a single preference is specified, the double-quotes can be omitted. Supported options are `WIDE` and `JSON`.  <p>If `JSON` is specified, output will be returned in JSON format.  If `JSON` is not specified, output will be returned in a tabular format.</p> 
 <p>`WIDE` returns additional details in the output.</p></dd>
 <dt>--help | -h</dt>
 <dd>List options available for the command</dd>
@@ -191,12 +191,12 @@ ibmcloud monitoring service-instance-platform --name <NAME> [OPTIONS]
 {: #service-instance-platform-options}
 
 <dl>
-<dt>--name &lt;NAME&gt;> | --n &lt;NAME&gt;</dt>
+<dt>--name &lt;NAME&gt; | --n &lt;NAME&gt;</dt>
 <dd>Name of the instance.</dd>
 <dt>--region &lt;NAME&gt; | -r &lt;NAME&gt;</dt>
 <dd>Name of the region, for example, `us-south` or `eu-gb`. If not specified, the region logged into or targeted will be used.</dd>
 <dt>--force</dt>
-<dd>Supresses the prompt and takes the default action.</dd>
+<dd>Supresses the prompt and replaces the existing platform metric instance with the instance specified by `--name`.</dd>
 <dt>--help | -h</dt>
 <dd>List options available for the command</dd>
 </dl>
