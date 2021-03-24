@@ -176,19 +176,19 @@ ibmcloud monitoring service-instances --region us-south --output json
 ```
 {: pre}
 
-## ibmcloud monitoring service-instance-platform
-{: #service-instance-platform}
+## ibmcloud monitoring platform-metrics-enable
+{: #platform-metrics-enable}
 
 Use this command to configure the specified {{site.data.keyword.mon_full_notm}} service instance to enable or disable platform metrics.  When run, the command prompts the user to keep an existing service instance or replace it with the specified instance. 
 
 ```sh
-ibmcloud monitoring service-instance-platform --name <NAME> [OPTIONS]
+ibmcloud monitoring platform-metrics-enable --name <NAME> [OPTIONS]
 ```
 {:pre}
 
 
 ### Command options 
-{: #service-instance-platform-options}
+{: #platform-metrics-enable-options}
 
 <dl>
 <dt>--name &lt;NAME&gt; | --n &lt;NAME&gt;</dt>
@@ -202,20 +202,20 @@ ibmcloud monitoring service-instance-platform --name <NAME> [OPTIONS]
 </dl>
   
 ### Examples
-{: #service-instance-platform-examples}
+{: #platform-metrics-enable-examples}
 
-The following are examples using the **`ibmcloud monitoring service-instance-platform`** command.
+The following are examples using the **`ibmcloud monitoring platform-metrics-enable`** command.
 
 Configures the `IBM Cloud Monitoring with Sysdig-abc` as the instance to receive platform metrics.
 
 ```sh
-ibmcloud monitoring service-instance-platform --name "IBM Cloud Monitoring with Sysdig-abc"
+ibmcloud monitoring platform-metrics-enable --name "IBM Cloud Monitoring with Sysdig-abc"
 ```
 {: pre}
 
 Configures the `IBM Cloud Monitoring with Sysdig-abc` in the `eu-gb` region as the instance to receive platform metrics.
 
 ```sh
-ibmcloud monitoring service-instance-platform --name "IBM Cloud Monitoring with Sysdig-abc" --region eu-gb
+ibmcloud monitoring platform-metrics-enable --name "IBM Cloud Monitoring with Sysdig-abc" --region eu-gb
 ```
 {: pre}
