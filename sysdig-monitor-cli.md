@@ -2,7 +2,7 @@
  
 copyright:
   years:  2021
-lastupdated: "2021-03-24"
+lastupdated: "2021-03-28"
 
 subcollection: sysdig-monitor-plugin-cli
 
@@ -19,7 +19,7 @@ keywords: IBM Cloud Monitoring CLI, IBM Cloud Monitoring command line , IBM Clou
 {:note: .note}
 
 
-# {{site.data.keyword.cloud_notm}} Monitoring (ibmcloud monitoring) CLI
+# Monitoring (ibmcloud monitoring) CLI
 {: #sysdig-monitor-cli}
 
 The {{site.data.keyword.cloud}} command-line interface (CLI) provides extra capabilities for service offerings. This information describes how you can use the CLI to access information in {{site.data.keyword.mon_full_notm}}.
