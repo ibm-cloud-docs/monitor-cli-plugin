@@ -1,2 +1,2 @@
-# sysdig-monitor-cli-plugin
-Documentation repository for sysdig-monitor-cli-plugin
+# monitor-cli-plugin
+Documentation repository for monitor-cli-plugin
