@@ -20,17 +20,13 @@ keywords: IBM Cloud Monitoring CLI, IBM Cloud Monitoring command line , IBM Clou
 
 
 # Monitoring (ibmcloud monitoring) CLI
-<<<<<<< HEAD:monitor-cli.md
 {: #monitor-cli}
-=======
-{: #sysdig-monitor-cli}
->>>>>>> 854564dd1b78b72ba0bf8c904bda5b8a33584f86:sysdig-monitor-cli.md
 
 The {{site.data.keyword.cloud}} command-line interface (CLI) provides extra capabilities for service offerings. This information describes how you can use the CLI to access information in {{site.data.keyword.mon_full_notm}}.
 {: shortdesc} 
 
 ## Prerequisites
-{: #sysdig-monitor-cli-prereq}
+{: #monitor-cli-prereq}
 
 * Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started).
 * Install the {{site.data.keyword.cloud_notm}} Monitoring CLI by running the following command:
@@ -78,24 +74,24 @@ ibmcloud monitoring alert list --name <NAME> [OPTIONS]
 
 The following are examples using the **`ibmcloud monitoring alert list`** command.
 
-List all alerts for the `IBM Cloud Monitoring with Sysdig-abc` instance.
+List all alerts for the `IBM Cloud Monitoring abc` instance.
 
 ```sh
-ibmcloud monitoring alert list --name "IBM Cloud Monitoring with Sysdig-abc"
+ibmcloud monitoring alert list --name "IBM Cloud Monitoring abc"
 ```
 {: pre}
 
-List all alerts for the `IBM Cloud Monitoring with Sysdig-abc` instance in the `us-south` region.
+List all alerts for the `IBM Cloud Monitoring abc` instance in the `us-south` region.
 
 ```sh
-ibmcloud monitoring alert list --name "IBM Cloud Monitoring with Sysdig-abc" --region us-south
+ibmcloud monitoring alert list --name "IBM Cloud Monitoring abc" --region us-south
 ```
 {: pre}
 
-List all alerts for the `IBM Cloud Monitoring with Sysdig-abc` instance with `low` and `medium` severity where notifications are not enabled.
+List all alerts for the `IBM Cloud Monitoring abc` instance with `low` and `medium` severity where notifications are not enabled.
 
 ```sh
-ibmcloud monitoring alert list --name "IBM Cloud Monitoring with Sysdig-abc" --enabled false --severity low,medium
+ibmcloud monitoring alert list --name "IBM Cloud Monitoring abc" --enabled false --severity low,medium
 ```
 {: pre}
 
@@ -210,16 +206,16 @@ ibmcloud monitoring platform-metrics-receiver --name <NAME> [OPTIONS]
 
 The following are examples using the **`ibmcloud monitoring platform-metrics-receiver`** command.
 
-Configures the `IBM Cloud Monitoring with Sysdig-abc` as the instance to receive platform metrics.
+Configures the `IBM Cloud Monitoring abc` as the instance to receive platform metrics.
 
 ```sh
-ibmcloud monitoring platform-metrics-receiver --name "IBM Cloud Monitoring with Sysdig-abc"
+ibmcloud monitoring platform-metrics-receiver --name "IBM Cloud Monitoring abc"
 ```
 {: pre}
 
-Configures the `IBM Cloud Monitoring with Sysdig-abc` in the `eu-gb` region as the instance to receive platform metrics.
+Configures the `IBM Cloud Monitoring abc` in the `eu-gb` region as the instance to receive platform metrics.
 
 ```sh
-ibmcloud monitoring platform-metrics-receiver --name "IBM Cloud Monitoring with Sysdig-abc" --region eu-gb
+ibmcloud monitoring platform-metrics-receiver --name "IBM Cloud Monitoring abc" --region eu-gb
 ```
 {: pre}
