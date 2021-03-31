@@ -1,9 +1,9 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="sysdig-monitor-cli-plugin" audience="cli" href="/docs/sysdig-monitor-cli-plugin?topic=sysdig-monitor-cli-plugin-sysdig-monitor-cli" path="sysdig-monitor-cli-plugin"}
+{: .toc subcollection="monitor-cli-plugin" audience="cli" href="/docs/monitor-cli-plugin?topic=monitor-cli-plugin-monitor-cli" path="monitor-cli-plugin"}
 IBM Cloud Monitoring CLI reference
 
     {: .navgroup id="reference"}
-    sysdig-monitor-cli.md
+    monitor-cli.md
     {: .navgroup-end}
