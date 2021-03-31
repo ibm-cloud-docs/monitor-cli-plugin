@@ -20,7 +20,11 @@ keywords: IBM Cloud Monitoring CLI, IBM Cloud Monitoring command line , IBM Clou
 
 
 # Monitoring (ibmcloud monitoring) CLI
+<<<<<<< HEAD:monitor-cli.md
 {: #monitor-cli}
+=======
+{: #sysdig-monitor-cli}
+>>>>>>> 854564dd1b78b72ba0bf8c904bda5b8a33584f86:sysdig-monitor-cli.md
 
 The {{site.data.keyword.cloud}} command-line interface (CLI) provides extra capabilities for service offerings. This information describes how you can use the CLI to access information in {{site.data.keyword.mon_full_notm}}.
 {: shortdesc} 
