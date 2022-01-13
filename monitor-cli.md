@@ -2,7 +2,7 @@
  
 copyright:
   years:  2021, 2022
-lastupdated: "2021-09-13"
+lastupdated: "2022-01-13"
 
 subcollection: monitor-plugin-cli
 
@@ -39,7 +39,7 @@ You are notified on the command line when updates to the {{site.data.keyword.clo
 Use this command to add an alert.
 
 ```sh
-ibmcloud monitoring alert add --name NAME [--alert-name ALERT_NAME] [--description DESCRIPTION] [--type TYPE] [--timespan TIMESPAN] [--condition CONDITION] [--severity SEVERITY] [--severity-label LOW, MEDIUM OR HIGH] [--disable] [--segment SEGMENT] [--segment-condition SEGMENT_CONDITION] [--user-filter USER_FILTER] [--notify NOTIFY] [--file JSON_FILE] [--region REGION] [--output FORMAT]
+ibmcloud monitoring alert add --name NAME [--alert-name ALERT_NAME] [--description DESCRIPTION] [--type TYPE] [--timespan TIMESPAN] [--condition CONDITION] [--severity SEVERITY] [--severity-label LOW, MEDIUM OR HIGH] [--disable] [--segment SEGMENT] [--segment-condition SEGMENT_CONDITION] [--user-filter USER_FILTER] [--notify NOTIFY] [--file JSON_FILE] [--region REGION] [--output FORMAT] [--team TEAM_NAME]
 ```
 {: pre}
 
@@ -99,6 +99,9 @@ ibmcloud monitoring alert add --name NAME [--alert-name ALERT_NAME] [--descripti
 
     `WIDE` returns additional details in the output.
 
+`--team <TEAM_NAME>`
+:   The name of the {{site.data.keyword.mon_full_notm}} team to be used for authorization. If no team is specified, the default team will be used.
+
 `--help` | `-h`
 :   List options available for the command.
   
@@ -141,7 +144,7 @@ ibmcloud monitoring alert add \
 Use this command to list the alerts for the specified instance. 
 
 ```sh
-ibmcloud monitoring alert list --name NAME [--severity SEVERITY] [--enabled TRUE or FALSE] [--region REGION] [--output FORMAT]
+ibmcloud monitoring alert list --name NAME [--severity SEVERITY] [--enabled TRUE or FALSE] [--region REGION] [--output FORMAT] [--team TEAM_NAME]
 ```
 {: pre}
 
@@ -167,6 +170,9 @@ ibmcloud monitoring alert list --name NAME [--severity SEVERITY] [--enabled TRUE
 
 `--enabled <TRUE | FALSE>` | `-e <TRUE | FALSE>`
 :   Boolean that indicates the alerts to be listed based on the alert notification settings.  If specified, `--enabled true` will list alerts for instances where notifications, for example, email or Slack, are enabled.  Specifying `--enabled false` will return a list of alerts for instances where notifications are not enabled.
+
+`--team <TEAM_NAME>`
+:   The name of the {{site.data.keyword.mon_full_notm}} team to be used for authorization. If no team is specified, the default team will be used.
 
 `--help` | `-h`
 :   List options available for the command.
@@ -207,7 +213,7 @@ ibmcloud monitoring alert list --name "IBM Cloud Monitoring abc" --enabled false
 Use this command to get details on an alert by using the alert ID.
 
 ```sh
-ibmcloud monitoring alert get --name NAME --id ALERT_ID [--region REGION] [--output FORMAT]
+ibmcloud monitoring alert get --name NAME --id ALERT_ID [--region REGION] [--output FORMAT] [--team TEAM_NAME]
 ```
 {: pre}
 
@@ -230,6 +236,9 @@ ibmcloud monitoring alert get --name NAME --id ALERT_ID [--region REGION] [--out
     If `JSON` is specified, output will be returned in JSON format.  If `JSON` is not specified, output will be returned in a tabular format.
 
     `WIDE` returns additional details in the output.
+
+`--team <TEAM_NAME>`
+:   The name of the {{site.data.keyword.mon_full_notm}} team to be used for authorization. If no team is specified, the default team will be used.
 
 `--help` | `-h`
 :   List options available for the command.
@@ -263,7 +272,7 @@ To update of an alert, you must modify the JSON file that you get by running the
 {: note}
 
 ```sh
-ibmcloud monitoring alert update --name NAME --id ALERT_ID --file JSON_FILE [--region REGION] [--output FORMAT]
+ibmcloud monitoring alert update --name NAME --id ALERT_ID --file JSON_FILE [--region REGION] [--output FORMAT] [--team TEAM_NAME]
 ```
 {: pre}
 
@@ -289,6 +298,9 @@ ibmcloud monitoring alert update --name NAME --id ALERT_ID --file JSON_FILE [--r
     If `JSON` is specified, output will be returned in JSON format.  If `JSON` is not specified, output will be returned in a tabular format.
 
     `WIDE` returns additional details in the output.
+
+`--team <TEAM_NAME>`
+:   The name of the {{site.data.keyword.mon_full_notm}} team to be used for authorization. If no team is specified, the default team will be used.
 
 `--help` | `-h`
 :   List options available for the command.
@@ -320,7 +332,7 @@ ibmcloud monitoring alert update --name "IBM Cloud Monitoring abc" --id 1234567 
 Use this command to delete an alert.
 
 ```sh
-ibmcloud monitoring alert delete --name NAME --id ALERT_ID [--region REGION] [--force]
+ibmcloud monitoring alert delete --name NAME --id ALERT_ID [--region REGION] [--force] [--team TEAM_NAME]
 ```
 {: pre}
 
@@ -339,6 +351,9 @@ ibmcloud monitoring alert delete --name NAME --id ALERT_ID [--region REGION] [--
 
 `--force`
 :   Supresses the prompt and deletes the alert from the instance that is specified by `--name`.
+
+`--team <TEAM_NAME>`
+:   The name of the {{site.data.keyword.mon_full_notm}} team to be used for authorization. If no team is specified, the default team will be used.
 
 `--help` | `-h`
 :   List options available for the command.
@@ -502,7 +517,7 @@ ibmcloud monitoring platform-metrics-receiver --name "IBM Cloud Monitoring abc" 
 Use this command to list all the dashboards that are visible to a user in a Monitoring instance. 
 
 ```sh
-ibmcloud monitoring dashboard list --name NAME [--region REGION] [--output FORMAT]
+ibmcloud monitoring dashboard list --name NAME [--region REGION] [--output FORMAT] [--team TEAM_NAME]
 ```
 {: pre}
 
@@ -522,6 +537,9 @@ ibmcloud monitoring dashboard list --name NAME [--region REGION] [--output FORMA
     If `JSON` is specified, output will be returned in JSON format.  If `JSON` is not specified, output will be returned in a tabular format.
 
     `WIDE` returns additional details in the output.
+
+`--team <TEAM_NAME>`
+:   The name of the {{site.data.keyword.mon_full_notm}} team to be used for authorization. If no team is specified, the default team will be used.
 
 `--help` | `-h`
 :   List options available for the command.
@@ -553,7 +571,7 @@ ibmcloud monitoring dashboard list --region us-south
 Use this command to get details for a dashboard by using the dashboard ID. 
 
 ```sh
-ibmcloud monitoring dashboard get --id DASHBOARD_ID --name NAME [OPTIONS]
+ibmcloud monitoring dashboard get --id DASHBOARD_ID --name NAME [OPTIONS] [--team TEAM_NAME]
 ```
 {: pre}
 
@@ -569,6 +587,9 @@ ibmcloud monitoring dashboard get --id DASHBOARD_ID --name NAME [OPTIONS]
 
 `--region <REGION>` | `-r <REGION>`
 :   Name of the region, for example, `us-south` or `eu-gb`. If not specified, the region logged into or targeted will be used.
+
+`--team <TEAM_NAME>`
+:   The name of the {{site.data.keyword.mon_full_notm}} team to be used for authorization. If no team is specified, the default team will be used.
 
 `--help` | `-h`
 :   List options available for the command.
@@ -600,7 +621,7 @@ ibmcloud monitoring dashboard get --name "IBM Cloud Monitoring abc" --region us-
 Use this command to create a dashboard by using a JSON file. 
 
 ```sh
-ibmcloud monitoring dashboard add-json --file JSON_FILE --name NAME [--region REGION]
+ibmcloud monitoring dashboard add-json --file JSON_FILE --name NAME [--region REGION] [--team TEAM_NAME]
 ```
 {: pre}
 
@@ -616,6 +637,9 @@ ibmcloud monitoring dashboard add-json --file JSON_FILE --name NAME [--region RE
 
 `--region <REGION>` | `-r <REGION>`
 :   Name of the region, for example, `us-south` or `eu-gb`. If not specified, the region logged into or targeted will be used.
+
+`--team <TEAM_NAME>`
+:   The name of the {{site.data.keyword.mon_full_notm}} team to be used for authorization. If no team is specified, the default team will be used.
 
 `--help` | `-h`
 :   List options available for the command.
@@ -646,7 +670,7 @@ ibmcloud monitoring dashboard add-json --name "IBM Cloud Monitoring abc" --file 
 Use this command to list the events. 
 
 ```sh
-ibmcloud monitoring event list --name NAME [--region REGION] [--last DURATION] [--from TIMESTAMP] [--to TIMESTAMP] [--limit LIMIT] [--output FORMAT]
+ibmcloud monitoring event list --name NAME [--region REGION] [--last DURATION] [--from TIMESTAMP] [--to TIMESTAMP] [--limit LIMIT] [--output FORMAT] [--team TEAM_NAME]
 ```
 {: pre}
 
@@ -678,6 +702,9 @@ ibmcloud monitoring event list --name NAME [--region REGION] [--last DURATION] [
     If `JSON` is specified, output will be returned in JSON format.  If `JSON` is not specified, output will be returned in a tabular format.
 
     `WIDE` returns additional details in the output.
+
+`--team <TEAM_NAME>`
+:   The name of the {{site.data.keyword.mon_full_notm}} team to be used for authorization. If no team is specified, the default team will be used.
 
 `--help` | `-h`
 :   List options available for the command.
