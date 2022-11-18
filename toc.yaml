@@ -2,7 +2,6 @@ toc:
   properties:
     subcollection: monitor-cli-plugin
     version: 2
-    category: logging_monitoring
     audience: service
     href: /docs/monitor-cli-plugin?topic=monitor-cli-plugin-monitor-cli
     console-page: /observe/monitoring
