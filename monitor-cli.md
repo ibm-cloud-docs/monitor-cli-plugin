@@ -1,7 +1,7 @@
 ---
- 
+
 copyright:
-  years:  2021, 2022
+  years:  2021, 2023
 lastupdated: "2022-01-13"
 
 subcollection: monitor-plugin-cli
@@ -17,7 +17,7 @@ keywords: IBM Cloud Monitoring CLI, IBM Cloud Monitoring command line , IBM Clou
 {: #monitor-cli}
 
 The {{site.data.keyword.cloud}} command-line interface (CLI) provides extra capabilities for service offerings. This information describes how you can use the CLI to access information in {{site.data.keyword.mon_full_notm}}.
-{: shortdesc} 
+{: shortdesc}
 
 ## Prerequisites
 {: #monitor-cli-prereq}
@@ -44,7 +44,7 @@ ibmcloud monitoring alert add --name NAME [--alert-name ALERT_NAME] [--descripti
 {: pre}
 
 
-### Command options 
+### Command options
 {: #alert-add-options}
 
 `--name <NAME>` | `--n <NAME>`
@@ -93,7 +93,7 @@ ibmcloud monitoring alert add --name NAME [--alert-name ALERT_NAME] [--descripti
 :   Name of the region, for example, `us-south` or `eu-gb`. If not specified, the region logged into or targeted will be used.
 
 `--output <FORMAT>`
-:   A comma-separated list of output preferences enclosed in double-quotes (").  If only a single preference is specified, the double-quotes can be omitted. Supported options are `WIDE` and `JSON`.  
+:   A comma-separated list of output preferences enclosed in double-quotes (").  If only a single preference is specified, the double-quotes can be omitted. Supported options are `WIDE` and `JSON`.
 
     If `JSON` is specified, output will be returned in JSON format.  If `JSON` is not specified, output will be returned in a tabular format.
 
@@ -104,7 +104,7 @@ ibmcloud monitoring alert add --name NAME [--alert-name ALERT_NAME] [--descripti
 
 `--help` | `-h`
 :   List options available for the command.
-  
+
 ### Examples
 {: #alert-add-examples}
 
@@ -141,7 +141,7 @@ ibmcloud monitoring alert add \
 ## ibmcloud monitoring alert list
 {: #alert-list}
 
-Use this command to list the alerts for the specified instance. 
+Use this command to list the alerts for the specified instance.
 
 ```sh
 ibmcloud monitoring alert list --name NAME [--severity SEVERITY] [--enabled TRUE or FALSE] [--region REGION] [--output FORMAT] [--team TEAM_NAME]
@@ -149,7 +149,7 @@ ibmcloud monitoring alert list --name NAME [--severity SEVERITY] [--enabled TRUE
 {: pre}
 
 
-### Command options 
+### Command options
 {: #alert-list-options}
 
 `--name <NAME>` | `--n <NAME>`
@@ -159,10 +159,10 @@ ibmcloud monitoring alert list --name NAME [--severity SEVERITY] [--enabled TRUE
 :   Name of the region, for example, `us-south` or `eu-gb`. If not specified, the region logged into or targeted will be used.
 
 `--severity <SEVERITY>` | `-s <SEVERITY>`
-:   A comma-separated list of severity values enclosed in double-quotes (").  If only a single severity is specified, the double-quotes can be omitted. 
+:   A comma-separated list of severity values enclosed in double-quotes (").  If only a single severity is specified, the double-quotes can be omitted.
 
 `--output <FORMAT>`
-:   A comma-separated list of output preferences enclosed in double-quotes (").  If only a single preference is specified, the double-quotes can be omitted. Supported options are `WIDE` and `JSON`.  
+:   A comma-separated list of output preferences enclosed in double-quotes (").  If only a single preference is specified, the double-quotes can be omitted. Supported options are `WIDE` and `JSON`.
 
     If `JSON` is specified, output will be returned in JSON format.  If `JSON` is not specified, output will be returned in a tabular format.
 
@@ -177,7 +177,7 @@ ibmcloud monitoring alert list --name NAME [--severity SEVERITY] [--enabled TRUE
 `--help` | `-h`
 :   List options available for the command.
 
-  
+
 ### Examples
 {: #alert-list-examples}
 
@@ -218,7 +218,7 @@ ibmcloud monitoring alert get --name NAME --id ALERT_ID [--region REGION] [--out
 {: pre}
 
 
-### Command options 
+### Command options
 {: #alert-get-options}
 
 `--name <NAME>` | `--n <NAME>`
@@ -231,8 +231,8 @@ ibmcloud monitoring alert get --name NAME --id ALERT_ID [--region REGION] [--out
 :   Name of the region, for example, `us-south` or `eu-gb`. If not specified, the region logged into or targeted will be used.
 
 `--output <FORMAT>`
-:   A comma-separated list of output preferences enclosed in double-quotes (").  If only a single preference is specified, the double-quotes can be omitted. Supported options are `WIDE` and `JSON`.  
-  
+:   A comma-separated list of output preferences enclosed in double-quotes (").  If only a single preference is specified, the double-quotes can be omitted. Supported options are `WIDE` and `JSON`.
+
     If `JSON` is specified, output will be returned in JSON format.  If `JSON` is not specified, output will be returned in a tabular format.
 
     `WIDE` returns additional details in the output.
@@ -242,7 +242,7 @@ ibmcloud monitoring alert get --name NAME --id ALERT_ID [--region REGION] [--out
 
 `--help` | `-h`
 :   List options available for the command.
-  
+
 ### Examples
 {: #alert-get-examples}
 
@@ -266,7 +266,7 @@ ibmcloud monitoring alert get --name "IBM Cloud Monitoring abc" --id 1234567 --r
 ## ibmcloud monitoring alert update
 {: #alert-update}
 
-Use this command to modify an alert by using a JSON file. 
+Use this command to modify an alert by using a JSON file.
 
 To update of an alert, you must modify the JSON file that you get by running the `ibmcloud monitoring alert get` command.
 {: note}
@@ -277,7 +277,7 @@ ibmcloud monitoring alert update --name NAME --id ALERT_ID --file JSON_FILE [--r
 {: pre}
 
 
-### Command options 
+### Command options
 {: #alert-update-options}
 
 `--name <NAME>` | `--n <NAME>`
@@ -293,7 +293,7 @@ ibmcloud monitoring alert update --name NAME --id ALERT_ID --file JSON_FILE [--r
 :   Name of the region, for example, `us-south` or `eu-gb`. If not specified, the region logged into or targeted will be used.
 
 `--output <TYPE>`
-:   A comma-separated list of output preferences enclosed in double-quotes (").  If only a single preference is specified, the double-quotes can be omitted. Supported options are `WIDE` and `JSON`.  
+:   A comma-separated list of output preferences enclosed in double-quotes (").  If only a single preference is specified, the double-quotes can be omitted. Supported options are `WIDE` and `JSON`.
 
     If `JSON` is specified, output will be returned in JSON format.  If `JSON` is not specified, output will be returned in a tabular format.
 
@@ -304,7 +304,7 @@ ibmcloud monitoring alert update --name NAME --id ALERT_ID --file JSON_FILE [--r
 
 `--help` | `-h`
 :   List options available for the command.
-  
+
 ### Examples
 {: #alert-update-examples}
 
@@ -337,7 +337,7 @@ ibmcloud monitoring alert delete --name NAME --id ALERT_ID [--region REGION] [--
 {: pre}
 
 
-### Command options 
+### Command options
 {: #alert-delete-options}
 
 `--name <NAME>` | `--n <NAME>`
@@ -358,7 +358,7 @@ ibmcloud monitoring alert delete --name NAME --id ALERT_ID [--region REGION] [--
 `--help` | `-h`
 :   List options available for the command.
 
-  
+
 ### Examples
 {: #alert-delete-examples}
 
@@ -383,7 +383,7 @@ ibmcloud monitoring alert delete --name "IBM Cloud Monitoring abc" --id 1234567 
 ## ibmcloud monitoring service-instances
 {: #service-instances}
 
-Use this command to list {{site.data.keyword.mon_full_notm}} service instances. 
+Use this command to list {{site.data.keyword.mon_full_notm}} service instances.
 
 ```sh
 ibmcloud monitoring service-instances [--region REGION] [--all-regions] [--g RESOURCE_GROUP] [--all-resource-groups] [--quiet] [--output FORMAT]
@@ -391,7 +391,7 @@ ibmcloud monitoring service-instances [--region REGION] [--all-regions] [--g RES
 {: pre}
 
 
-### Command options 
+### Command options
 {: #service-instances-options}
 
 `--region <REGION>` | `-r <REGION>`
@@ -410,7 +410,7 @@ ibmcloud monitoring service-instances [--region REGION] [--all-regions] [--g RES
 :   Supresses verbose output.
 
 `--output <FORMAT>`
-:   A comma-separated list of output preferences enclosed in double-quotes (").  If only a single preference is specified, the double-quotes can be omitted. Supported options are `WIDE` and `JSON`.  
+:   A comma-separated list of output preferences enclosed in double-quotes (").  If only a single preference is specified, the double-quotes can be omitted. Supported options are `WIDE` and `JSON`.
 
     If `JSON` is specified, output will be returned in JSON format.  If `JSON` is not specified, output will be returned in a tabular format.
 
@@ -418,7 +418,7 @@ ibmcloud monitoring service-instances [--region REGION] [--all-regions] [--g RES
 
 `--help` | `-h`
 :   List options available for the command.
-  
+
 ### Examples
 {: #service-instances-examples}
 
@@ -469,7 +469,7 @@ ibmcloud monitoring service-instances --region us-south --output json
 ## ibmcloud monitoring platform-metrics-receiver
 {: #platform-metrics-receiver}
 
-Use this command to configure the specified {{site.data.keyword.mon_full_notm}} service instance to receive platform metrics.  When run, the command prompts the user to keep an existing service instance or replace it with the specified instance. 
+Use this command to configure the specified {{site.data.keyword.mon_full_notm}} service instance to receive platform metrics.  When run, the command prompts the user to keep an existing service instance or replace it with the specified instance.
 
 ```sh
 ibmcloud monitoring platform-metrics-receiver --name NAME [--region REGION] [--force]
@@ -477,7 +477,7 @@ ibmcloud monitoring platform-metrics-receiver --name NAME [--region REGION] [--f
 {: pre}
 
 
-### Command options 
+### Command options
 {: #platform-metrics-receiver-options}
 
 `--name <NAME>` | `--n <NAME>`
@@ -491,7 +491,7 @@ ibmcloud monitoring platform-metrics-receiver --name NAME [--region REGION] [--f
 
 `--help` | `-h`
 :   List options available for the command.
-  
+
 ### Examples
 {: #platform-metrics-receiver-examples}
 
@@ -514,7 +514,7 @@ ibmcloud monitoring platform-metrics-receiver --name "IBM Cloud Monitoring abc" 
 ## ibmcloud monitoring dashboard list
 {: #dashboard-list}
 
-Use this command to list all the dashboards that are visible to a user in a Monitoring instance. 
+Use this command to list all the dashboards that are visible to a user in a Monitoring instance.
 
 ```sh
 ibmcloud monitoring dashboard list --name NAME [--region REGION] [--output FORMAT] [--team TEAM_NAME]
@@ -522,7 +522,7 @@ ibmcloud monitoring dashboard list --name NAME [--region REGION] [--output FORMA
 {: pre}
 
 
-### Command options 
+### Command options
 {: #dashboard-list-options}
 
 `--name <NAME>` | `--sn <NAME>`
@@ -532,7 +532,7 @@ ibmcloud monitoring dashboard list --name NAME [--region REGION] [--output FORMA
 :   Name of the region, for example, `us-south` or `eu-gb`. If not specified, the region logged into or targeted will be used.
 
 `--output <TYPE>`
-:   A comma-separated list of output preferences enclosed in double-quotes (").  If only a single preference is specified, the double-quotes can be omitted. Supported options are `WIDE` and `JSON`.  
+:   A comma-separated list of output preferences enclosed in double-quotes (").  If only a single preference is specified, the double-quotes can be omitted. Supported options are `WIDE` and `JSON`.
 
     If `JSON` is specified, output will be returned in JSON format.  If `JSON` is not specified, output will be returned in a tabular format.
 
@@ -568,7 +568,7 @@ ibmcloud monitoring dashboard list --region us-south
 ## ibmcloud monitoring dashboard get
 {: #dashboard-get}
 
-Use this command to get details for a dashboard by using the dashboard ID. 
+Use this command to get details for a dashboard by using the dashboard ID.
 
 ```sh
 ibmcloud monitoring dashboard get --id DASHBOARD_ID --name NAME [OPTIONS] [--team TEAM_NAME]
@@ -576,7 +576,7 @@ ibmcloud monitoring dashboard get --id DASHBOARD_ID --name NAME [OPTIONS] [--tea
 {: pre}
 
 
-### Command options 
+### Command options
 {: #dashboard-get-options}
 
 `--name <NAME>` | `--sn <NAME>`
@@ -593,7 +593,7 @@ ibmcloud monitoring dashboard get --id DASHBOARD_ID --name NAME [OPTIONS] [--tea
 
 `--help` | `-h`
 :   List options available for the command.
-  
+
 ### Examples
 {: #dashboard-get-examples}
 
@@ -618,7 +618,7 @@ ibmcloud monitoring dashboard get --name "IBM Cloud Monitoring abc" --region us-
 ## ibmcloud monitoring dashboard add-json
 {: #dashboard-add-json}
 
-Use this command to create a dashboard by using a JSON file. 
+Use this command to create a dashboard by using a JSON file.
 
 ```sh
 ibmcloud monitoring dashboard add-json --file JSON_FILE --name NAME [--region REGION] [--team TEAM_NAME]
@@ -626,7 +626,7 @@ ibmcloud monitoring dashboard add-json --file JSON_FILE --name NAME [--region RE
 {: pre}
 
 
-### Command options 
+### Command options
 {: #dashboard-add-json-options}
 
 `--file <FILE>` | `-f <JSON_FILE>`
@@ -644,7 +644,7 @@ ibmcloud monitoring dashboard add-json --file JSON_FILE --name NAME [--region RE
 `--help` | `-h`
 :   List options available for the command.
 
-  
+
 ### Examples
 {: #dashboard-add-json-examples}
 
@@ -667,7 +667,7 @@ ibmcloud monitoring dashboard add-json --name "IBM Cloud Monitoring abc" --file 
 ## ibmcloud monitoring event list
 {: #event-list}
 
-Use this command to list the events. 
+Use this command to list the events.
 
 ```sh
 ibmcloud monitoring event list --name NAME [--region REGION] [--last DURATION] [--from TIMESTAMP] [--to TIMESTAMP] [--limit LIMIT] [--output FORMAT] [--team TEAM_NAME]
@@ -675,7 +675,7 @@ ibmcloud monitoring event list --name NAME [--region REGION] [--last DURATION] [
 {: pre}
 
 
-### Command options 
+### Command options
 {: #event-list-options}
 
 `--name <NAME>` | `--sn <NAME>`
@@ -697,7 +697,7 @@ ibmcloud monitoring event list --name NAME [--region REGION] [--last DURATION] [
 :   Maximum number of events to print in the period of time specified in the request. By default, the parameter is set to a 100 events. The maximum number of events hat you can set is 10000.
 
 `--output <TYPE>`
-:   A comma-separated list of output preferences enclosed in double-quotes (").  If only a single preference is specified, the double-quotes can be omitted. Supported options are `WIDE` and `JSON`.  
+:   A comma-separated list of output preferences enclosed in double-quotes (").  If only a single preference is specified, the double-quotes can be omitted. Supported options are `WIDE` and `JSON`.
 
     If `JSON` is specified, output will be returned in JSON format.  If `JSON` is not specified, output will be returned in a tabular format.
 
@@ -708,7 +708,7 @@ ibmcloud monitoring event list --name NAME [--region REGION] [--last DURATION] [
 
 `--help` | `-h`
 :   List options available for the command.
-  
+
 ### Examples
 {: #event-list-examples}
 
@@ -717,7 +717,7 @@ The following are examples using the **`ibmcloud monitoring event list`** comman
 List events for the `IBM Cloud Monitoring abc` instance.
 
 ```sh
-ibmcloud monitoring event list --name "IBM Cloud Monitoring abc" 
+ibmcloud monitoring event list --name "IBM Cloud Monitoring abc"
 ```
 {: pre}
 
@@ -731,14 +731,14 @@ ibmcloud monitoring event list --name "IBM Cloud Monitoring abc" --region us-sou
 List events for the `IBM Cloud Monitoring abc` instance in the `us-south` region for the last hour.
 
 ```sh
-ibmcloud monitoring event list --name "IBM Cloud Monitoring abc" --region us-south --duration 1H 
+ibmcloud monitoring event list --name "IBM Cloud Monitoring abc" --region us-south --duration 1H
 ```
 {: pre}
 
 ## ibmcloud monitoring settings notification list
 {: #settings-notification-list}
 
-Use this command to list notification channels. 
+Use this command to list notification channels.
 
 ```sh
 ibmcloud monitoring settings notification list --name NAME [--region REGION] [--output FORMAT]
@@ -746,7 +746,7 @@ ibmcloud monitoring settings notification list --name NAME [--region REGION] [--
 {: pre}
 
 
-### Command options 
+### Command options
 {: #settings-notification-list-options}
 
 `--name <NAME>` | `--sn <NAME>`
@@ -756,7 +756,7 @@ ibmcloud monitoring settings notification list --name NAME [--region REGION] [--
 :   Name of the region, for example, `us-south` or `eu-gb`. If not specified, the region logged into or targeted will be used.
 
 `--output <TYPE>`
-:   A comma-separated list of output preferences enclosed in double-quotes (").  If only a single preference is specified, the double-quotes can be omitted. Supported options are `WIDE` and `JSON`.  
+:   A comma-separated list of output preferences enclosed in double-quotes (").  If only a single preference is specified, the double-quotes can be omitted. Supported options are `WIDE` and `JSON`.
 
     If `JSON` is specified, output will be returned in JSON format.  If `JSON` is not specified, output will be returned in a tabular format.
 
@@ -764,7 +764,7 @@ ibmcloud monitoring settings notification list --name NAME [--region REGION] [--
 
 `--help` | `-h`
 :   List options available for the command.
-  
+
 ### Examples
 {: #settings-notification-list-examples}
 
@@ -773,7 +773,7 @@ The following are examples using the **`ibmcloud monitoring settings notificatio
 List the notification channels for the `IBM Cloud Monitoring abc` instance.
 
 ```sh
-ibmcloud monitoring settings notification list --name "IBM Cloud Monitoring abc" 
+ibmcloud monitoring settings notification list --name "IBM Cloud Monitoring abc"
 ```
 {: pre}
 
@@ -787,7 +787,7 @@ ibmcloud monitoring settings notification list --name "IBM Cloud Monitoring abc"
 ## ibmcloud monitoring settings team list
 {: #settings-team-list}
 
-Use this command to list teams. 
+Use this command to list teams.
 
 ```sh
 ibmcloud monitoring settings team list --name NAME [--region REGION] [--output FORMAT]
@@ -795,7 +795,7 @@ ibmcloud monitoring settings team list --name NAME [--region REGION] [--output F
 {: pre}
 
 
-### Command options 
+### Command options
 {: #settings-team-list-options}
 
 `--name <NAME>` | `--sn <NAME>`
@@ -805,7 +805,7 @@ ibmcloud monitoring settings team list --name NAME [--region REGION] [--output F
 :   Name of the region, for example, `us-south` or `eu-gb`. If not specified, the region logged into or targeted will be used.
 
 `--output <TYPE>`
-:   A comma-separated list of output preferences enclosed in double-quotes (").  If only a single preference is specified, the double-quotes can be omitted. Supported options are `WIDE` and `JSON`.  
+:   A comma-separated list of output preferences enclosed in double-quotes (").  If only a single preference is specified, the double-quotes can be omitted. Supported options are `WIDE` and `JSON`.
 
     If `JSON` is specified, output will be returned in JSON format.  If `JSON` is not specified, output will be returned in a tabular format.
 
@@ -813,7 +813,7 @@ ibmcloud monitoring settings team list --name NAME [--region REGION] [--output F
 
 `--help` | `-h`
 :   List options available for the command.
-  
+
 ### Examples
 {: #settings-team-list-examples}
 
@@ -822,7 +822,7 @@ The following are examples using the **`ibmcloud monitoring settings team list`*
 List the teams for the `IBM Cloud Monitoring abc` instance.
 
 ```sh
-ibmcloud monitoring settings team list --name "IBM Cloud Monitoring abc" 
+ibmcloud monitoring settings team list --name "IBM Cloud Monitoring abc"
 ```
 {: pre}
 
@@ -837,7 +837,7 @@ ibmcloud monitoring settings team list --name "IBM Cloud Monitoring abc" --regio
 ## ibmcloud monitoring settings user list
 {: #settings-user-list}
 
-Use this command to list users. 
+Use this command to list users.
 
 ```sh
 ibmcloud monitoring settings user list --name NAME [--region REGION] [--teamID TEAM_ID] [--output FORMAT]
@@ -845,7 +845,7 @@ ibmcloud monitoring settings user list --name NAME [--region REGION] [--teamID T
 {: pre}
 
 
-### Command options 
+### Command options
 {: #settings-user-list-options}
 
 `--name <NAME>` | `--sn <NAME>`
@@ -858,7 +858,7 @@ ibmcloud monitoring settings user list --name NAME [--region REGION] [--teamID T
 :   ID of the team.
 
 `--output <TYPE>`
-:   A comma-separated list of output preferences enclosed in double-quotes (").  If only a single preference is specified, the double-quotes can be omitted. Supported options are `WIDE` and `JSON`.  
+:   A comma-separated list of output preferences enclosed in double-quotes (").  If only a single preference is specified, the double-quotes can be omitted. Supported options are `WIDE` and `JSON`.
 
     If `JSON` is specified, output will be returned in JSON format.  If `JSON` is not specified, output will be returned in a tabular format.
 
@@ -866,7 +866,7 @@ ibmcloud monitoring settings user list --name NAME [--region REGION] [--teamID T
 
 `--help` | `-h`
 :   List options available for the command.
-  
+
 ### Examples
 {: #settings-user-list-examples}
 
@@ -875,7 +875,7 @@ The following are examples using the **`ibmcloud monitoring settings user list`*
 List the users for the `IBM Cloud Monitoring abc` instance.
 
 ```sh
-ibmcloud monitoring settings user list --name "IBM Cloud Monitoring abc" 
+ibmcloud monitoring settings user list --name "IBM Cloud Monitoring abc"
 ```
 {: pre}
 
@@ -885,6 +885,3 @@ List the users for the `IBM Cloud Monitoring abc` instance in the `us-south` reg
 ibmcloud monitoring settings user list --name "IBM Cloud Monitoring abc" --region us-south
 ```
 {: pre}
-
-
-
