@@ -1,9 +1,0 @@
-{:navgroup: .navgroup}
-{:topicgroup: .topicgroup}
-
-{: .toc subcollection="monitor-cli-plugin" audience="cli" href="/docs/monitor-cli-plugin?topic=monitor-cli-plugin-monitor-cli" path="monitor-cli-plugin"}
-IBM Cloud Monitoring CLI reference
-
-    {: .navgroup id="reference"}
-    monitor-cli.md
-    {: .navgroup-end}
