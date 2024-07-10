@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years:  2021, 2023
-lastupdated: "2022-01-13"
+  years:  2018, 2024
+lastupdated: "2024-07-10"
 
 subcollection: monitor-plugin-cli
 
-keywords: IBM Cloud Monitoring CLI, IBM Cloud Monitoring command line , IBM Cloud Monitoring terminal, IBM Cloud Monitoring shell
+keywords: I
 
 ---
 
