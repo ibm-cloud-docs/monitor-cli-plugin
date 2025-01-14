@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-07-10"
+  years:  2018, 2025
+lastupdated: "2025-01-14"
 
 subcollection: monitor-plugin-cli
 
-keywords: I
+keywords: 
 
 ---
 
