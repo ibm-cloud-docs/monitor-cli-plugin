@@ -2,9 +2,9 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-01-14"
+lastupdated: "2025-02-24"
 
-subcollection: monitor-plugin-cli
+subcollection: monitor-cli-plugin
 
 keywords: 
 
